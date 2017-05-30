@@ -21,4 +21,7 @@
 .byebug_history
 
 #info sources et al :)
-#Wiki-me.md
+Wiki-me.md
+
+#rubocop
+rubocop.yml
