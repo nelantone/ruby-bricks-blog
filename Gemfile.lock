@@ -41,9 +41,20 @@ GEM
     arel (8.0.0)
     as-duration (0.1.1)
     ast (2.3.0)
+    autoprefixer-rails (7.1.2.1)
+      execjs
     bindex (0.5.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -93,6 +104,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
+    orm_adapter (0.5.0)
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
@@ -168,6 +180,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -206,7 +221,9 @@ PLATFORMS
 
 DEPENDENCIES
   as-duration
+  bootstrap-sass (~> 3.3)
   byebug
+  ckeditor
   coffee-rails (~> 4.2)
   factory_girl_rails
   faker
@@ -221,6 +238,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   sass-rails (~> 5.0)
+  simple_form (~> 3.2)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
