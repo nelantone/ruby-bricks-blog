@@ -1,37 +1,28 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
+<%= simple_form_for @post do |f| %>
+  <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
+      <h2>
+        <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:" %>
+      </h2>
       <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+          <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
+  <div class="form-group">
+    <%= f.input :title, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :hashtags %>
-    <%= form.text_field :hashtags, id: :post_hashtags %>
+  <div class="form-group">
+    <%= f.input :body, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :post_body %>
-  </div>
-
-  <div class="field">
-    <%= form.label :reading_time %>
-    <%= form.text_field :reading_time, id: :post_reading_time %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= f.button :submit %>
   </div>
 <% end %>
