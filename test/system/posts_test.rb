@@ -1,6 +1,6 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
-class PostsTest < ApplicationSystemTestCase
+class PostsTest < ApplicationSystemTestCase # :nodoc:
   # test "visiting the index" do
   #   visit posts_url
   #

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Post, type: :model  do 
+RSpec.describe Post, type: :model do
   it 'has a valid post' do
     post = FactoryGirl.build(:post)
     expect(post).to be_valid

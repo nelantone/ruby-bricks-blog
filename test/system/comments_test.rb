@@ -1,6 +1,6 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
-class CommentsTest < ApplicationSystemTestCase
+class CommentsTest < ApplicationSystemTestCase # :nodoc:
   # test "visiting the index" do
   #   visit comments_url
   #

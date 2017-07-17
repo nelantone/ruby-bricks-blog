@@ -1,4 +1,4 @@
-module ApplicationCable
-  class Channel < ActionCable::Channel::Base
+module ApplicationCable # :nodoc:
+  class Channel < ActionCable::Channel::Base # :nodoc:
   end
 end
