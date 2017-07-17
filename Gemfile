@@ -34,11 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '~> 3.3'
+gem 'carrierwave'
 gem 'ckeditor'
 gem 'devise'
-gem 'simple_form', '~> 3.2'
-gem 'carrierwave'
 gem 'mini_magick'
+gem 'simple_form', '~> 3.2'
 
 group :development, :test do
   gem 'as-duration'
