@@ -37,6 +37,8 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'ckeditor'
 gem 'devise'
 gem 'simple_form', '~> 3.2'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'as-duration'
