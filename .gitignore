@@ -25,3 +25,6 @@ Wiki-me.md
 
 #rubocop
 rubocop.yml
+
+# doetenv
+.env

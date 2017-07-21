@@ -6,9 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '>=5.1.2'
+gem 'railties', '5.1.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -33,12 +34,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap-sass', '~> 3.3'
+gem 'simple_form'
+gem 'bootstrap-sass'
 gem 'carrierwave'
-gem 'ckeditor'
+gem 'ckeditor', '~> 4.1'
 gem 'devise'
 gem 'mini_magick'
-gem 'simple_form', '~> 3.2'
+gem 'non-stupid-digest-assets', '~> 1.0.4'
 
 group :development, :test do
   gem 'as-duration'
@@ -46,10 +48,14 @@ group :development, :test do
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'fuubar'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :development do

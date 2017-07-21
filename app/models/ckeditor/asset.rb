@@ -1,11 +1,7 @@
-# :nodoc:
-class Ckeditor
-  # :nodoc:
-  class Asset < ApplicationRecord
-    include Ckeditor::Orm::ActiveRecord::AssetBase
+class Ckeditor::Asset < ActiveRecord::Base
+  include Ckeditor::Orm::ActiveRecord::AssetBase
 
-    delegate :url, :current_path, :content_type, to: :data
+  delegate :url, :current_path, :content_type, :to => :data
 
-    validates :data, presence: true
-  end
+  validates_presence_of :data
 end

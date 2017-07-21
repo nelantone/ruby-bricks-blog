@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170709005356) do
+ActiveRecord::Schema.define(version: 20170722152703) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170709005356) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -33,12 +37,15 @@ ActiveRecord::Schema.define(version: 20170709005356) do
     t.string "data_file_name", null: false
     t.string "data_content_type"
     t.integer "data_file_size"
+    t.integer "assetable_id"
+    t.string "assetable_type", limit: 30
     t.string "type", limit: 30
     t.integer "width"
     t.integer "height"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["type"], name: "index_ckeditor_assets_on_type"
+    t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+    t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
   end
 
   create_table "comments", force: :cascade do |t|
