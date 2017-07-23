@@ -6028,12 +6028,12 @@ tbody.collapse.in {
 }
 /* line 397, /Users/antonio.gutierrez/.rvm/gems/ruby-2.4.1/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #c50905;
+  border-color: grey;
 }
 /* line 401, /Users/antonio.gutierrez/.rvm/gems/ruby-2.4.1/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
-  color: #777;
+  color: white;
 }
 /* line 403, /Users/antonio.gutierrez/.rvm/gems/ruby-2.4.1/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
