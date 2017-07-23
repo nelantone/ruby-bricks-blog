@@ -18,7 +18,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create post' do
     assert_difference('Post.count') do
-      post posts_url, params: { post: { body: @post.body,
+      post posts_url, params: { post: { body: @post.body.html_safe,
                                         hashtags: @post.hashtags,
                                         reading_time: @post.reading_time,
                                         title: @post.title } }
@@ -38,7 +38,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update post' do
-    patch post_url(@post), params: { post: { body: @post.body,
+    patch post_url(@post), params: { post: { body: @post.body.html_safe,
                                              hashtags: @post.hashtags,
                                              reading_time: @post.reading_time,
                                              title: @post.title } }
