@@ -1,0 +1,22 @@
+.navbar-default {
+  background-color: #c40d22;
+  border-color: #a50b1d;
+  background-image: url(http://lightmoor.co.uk/BDLarchive_pics/arch23_2.jpg);
+  background-position-y: 10;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// https://gist.github.com/scottnix/a6fd7fd6fda2cab56e41
+$navbar-default-bg: #c40d22;
+$navbar-default-link-color:                #d8b0af !default;
+$navbar-default-link-hover-color:          white !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-toggle-border-color:       black !default;
+// Navbar brand label
+$navbar-default-brand-color:               white !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";

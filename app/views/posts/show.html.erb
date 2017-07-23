@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <strong> <h3><%= @post.title %></h3></strong>
+
 </p>
 
 <p>
-  <strong>Hashtags:</strong>
-  <%= @post.hashtags %>
+  <i>Hashtags: <%= @post.hashtags %></i>
 </p>
 
 <p>
@@ -16,7 +15,8 @@
 
 <p>
   <strong>Reading time:</strong>
-  <%= @post.reading_time %>
+  <%=  @post.body.reading_time :format => :approx %>
+
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
