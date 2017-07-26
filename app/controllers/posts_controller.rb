@@ -12,6 +12,10 @@ class PostsController < ApplicationController # :nodoc:
   # GET /posts/1.json
   def show; end
 
+  # GET /one_kb_posts/1
+  # GET /one_kb_posts/1.json
+  def one_kb_post; end
+
   # GET /posts/new
   def new
     @post = Post.new

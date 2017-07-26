@@ -5,9 +5,14 @@
       <div class="text-center">
         <h2><%= post.title %></h2>
         <h6><%= post.created_at.strftime('%b %d, %Y') %></h6>
+        <p>
+          <h5><i>Reading time: <%=  post.body.reading_time :format => :approx %></i></h5>
+        </p>
       </div>
       <div>
-        <%= raw(post.body).truncate(358).html_safe %>
+        <%= link_to post_path(post) do %>
+          <%= raw(post.body).truncate(358).html_safe %>
+        <% end %>
       </div>
       <div class="text-center">
         <%= link_to "READ MORE", post_path(post) %>

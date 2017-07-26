@@ -1,10 +1,11 @@
+
 .navbar-default {
   background-color: #c40d22;
   border-color: #a50b1d;
   background-image: url(http://lightmoor.co.uk/BDLarchive_pics/arch23_2.jpg);
   background-position-y: 10;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
 }
 
 // https://gist.github.com/scottnix/a6fd7fd6fda2cab56e41
@@ -20,3 +21,10 @@ $navbar-default-brand-hover-bg:            transparent !default;
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12%;
+    padding-right: 15px;
+}
