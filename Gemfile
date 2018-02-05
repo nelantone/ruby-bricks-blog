@@ -48,7 +48,7 @@ gem 'readingtime', '~> 0.3.1'
 group :development, :test do
   gem 'as-duration'
   gem 'dotenv-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
@@ -58,7 +58,10 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+  # **The pg gem recently released version 1.0.0 which is not yet compatible with Rails.
+  # source: https://stackoverflow.com/questions/48201361/rails-application-using-postgres-adapter-cant-activate-pg
+  # If you're on Rails 5, change your Gemfile's pg requirement to the following1:
+  gem 'pg', '~> 0.18'
 end
 
 group :development do

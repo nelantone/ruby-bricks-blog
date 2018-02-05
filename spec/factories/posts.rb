@@ -1,6 +1,6 @@
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :post do
     title { Faker::Name.title }
     hashtags { Faker::StarWars.planet }
